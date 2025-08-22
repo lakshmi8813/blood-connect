@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bloodFacts</title>
+  <link rel="stylesheet" href="blood-c.css">
+  <style>
+  *{
+    padding:0;
+    margin: 0;
+  }
+h2{
+  margin-left: 30px;
+}
+  main a{
+    font-size: larger;
+  color:#b30000;
+
+  }
+  .fos{
+    margin-left: 30px;
+
+  }
+.bloodFacts{
+  margin: 20px 10px;
+  padding: 10px;
+  border-bottom: 2px dashed pink;
+}
+.bloodFacts h2{
+  margin-bottom: 10px;
+}
+.bloodFacts h3{
+  margin-bottom: 7px;
+}
+.bloodFacts p{
+  margin-bottom: 5px;
+}
+.rhfactor{
+  margin-left: 25px;
+}
+.bloodFacts img{
+ margin-top: 30px;
+position: absolute;
+top:230px;
+left:750px;
+width:400px;
+}
+.blood-types-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content:left;
+  margin-left: 20px;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+/* .content h1 {
+  color: #c82333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+} */
+
+.content h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #c82626;
+}
+
+.blood-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.blood-type {
+  background-color: #fff;
+  border-left: 6px solid #c82333;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+.blood-type li{
+  margin-left: 20px;
+}
+
+.blood-type h3 {
+  color: #c82333;
+  margin-bottom: 10px;
+}
+
+.image img {
+  max-width: 350px;
+  width: 100%;
+  border: 2px solid #f0c2c2;
+  border-radius: 10px;
+}
+.BloodTypes img{
+  position: absolute;
+  top:700px;
+  left:700px;
+  border-radius: 8px;
+  width:500px;
+  border:2px solid rgb(252, 124, 124);
+}
+
+
+
+/*----- COMPATABILITY-----*/
+.donation-section {
+  text-align: left;
+  padding: 40px 20px;
+}
+
+/* .donation-section h2 {
+  color: hsl(356, 92%, 46%);
+  font-size: 2rem;
+} */
+
+.blood-type-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  gap: 30px;
+
+}
+
+.blood-type-buttons button {
+  background-color: #fff;
+  border: 2px solid #900c1e;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.blood-type-buttons button:hover {
+  background-color:rgb(111, 43, 43); 
+  color: #fff;
+  font-size: bold;
+  border:2px solid white;
+  width:90px;
+} 
+
+.receive-box {
+  background-color: #ffe5b4;
+}
+
+.give-box {
+  background-color: #b4d8ff;
+}
+
+.blood-type-selection{
+  margin-top: 9px;
+  margin-left: 70px;
+}
+
+.info {
+    display: flex;
+    gap: 25px;
+  margin:30px 80px;
+}
+
+.take-from, .give-to {
+    background-color:rgb(251, 223, 228);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height:150px;
+}
+.info h2{
+  text-align: center;
+  margin-top:40px;
+}
+.info p{
+  text-align: center;
+}
+
+.give-to {
+    background-color: #dfeffd;
+}
+  </style>
+
+</head>
+<body>
+  <header>
+<div id="head-section">
+      <img  class="logo" src="images/blood connect.png">
+       <h1 class="title" style="font-size:28px;">BloodConnect</h1>
+      <p class="tag-line">Give the Gift of Life</p>
+
+  <div class="navbar"> 
+        <li><a href="home.html">Home</a></li>
+        <li><a href="BloodFacts.html"> Blood Facts</a></li>
+        <li><a href="DonationForm.html"> Donate Blood</a></li>
+        <li><a href="requestBlood.html">Request Blood</a></li>
+        <li><a href="eligibity.html">Donor Eligibilty</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+       </ul> 
+      </div>
+  </header> 
+<main>
+<div class="bloodFacts">
+  <img src="images/OIP (9).jpeg">
+<h2> What is Blood?</h2>
+      <p>Blood is the lifeline of the human body—it’s a fluid connective tissue that<br> delivers oxygen, nutrients, hormones, and essential substances to cells  <br>while removing waste products like carbon dioxide.<br>  It plays a crucial role in <strong>immune defense, healing, and temperature regulation.</strong></p>
+
+<br>
+      <h3>Components of Blood:</h3>
+     <p> Blood is made up of <strong>four</strong> main components:</p>
+
+<p><strong>Red Blood Cells (RBCs)</strong> – Carry oxygen to tissues and remove carbon dioxide
+
+<p><strong>White Blood Cells (WBCs)</strong> – Defend the body against infections</p>
+
+<p><strong>Platelets</strong> – Help in blood clotting and wound healing</p>
+
+<p><strong>Plasma</strong> – The liquid part that transports nutrients, hormones, and waste</p>
+
+<!-- <img src="/images/droplet1.png"> -->
+<!-- <img src="/images/2-blooddonationeligibility.jpg"> -->
+</div>
+
+<div class="BloodTypes">
+<h2>Blood Types</h2>
+<section class="blood-types-section">
+  <div class="content">
+    <p>Blood types are classified based on the <strong>ABO system</strong> and the <strong>Rh factor</strong>. These determine compatibility for transfusions and organ donations.</p>
+
+    <h2>ABO Blood Group System</h2>
+    <p>This system categorizes blood into four main types based on the presence of specific <strong>antigens</strong> on red blood cells and <strong>antibodies</strong> in the plasma.</p>
+
+    <div class="blood-types">
+      <div class="blood-type">
+        <h3>Type A</h3>
+        <ul>
+          <li><strong>Antigens on red blood cells:</strong> A antigen</li>
+          <li><strong>Antibodies in plasma:</strong> Anti-B</li>
+        </ul>
+      </div>
+      <div class="blood-type">
+        <h3>Type B</h3>
+        <ul>
+          <li><strong>Antigens on red blood cells:</strong> B antigen</li>
+          <li><strong>Antibodies in plasma:</strong> Anti-A</li>
+        </ul>
+      </div>
+      <div class="blood-type">
+        <h3>Type AB</h3>
+        <ul>
+          <li><strong>Antigens on red blood cells:</strong> A and B antigens</li>
+          <li><strong>Antibodies in plasma:</strong> None</li>
+        </ul>
+      </div>
+      <div class="blood-type">
+        <h3>Type O</h3>
+        <ul>
+          <li><strong>Antigens on red blood cells:</strong> None</li>
+          <li><strong>Antibodies in plasma:</strong> Anti-A and Anti-B</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <img src="/images/images (5)[1].jpg">
+</div>
+<br>
+<div class="rhfactor">
+  <h2>  Rh Factor (+ or -)</h2>
+  <p>In addition to ABO classification, blood types are further categorized based on the <strong>Rh factor</strong>,<br> which refers to the Rh antigen (D antigen).</p>
+<br>
+  <li><strong>Rh-positive (Rh+):</strong>Has the Rh antigen.</li>
+  <li><strong>Rh-negative (Rh-):</strong>Lacks the Rh antigen.</li>
+  <p>Blood type compatibility depends on both the ABO and Rh factor:</p>
+<li>Rh-negative individuals can only receive Rh-negative blood.</li>
+<li>Rh-positive individuals can receive both Rh-positive and Rh-negative blood.</li>
+
+</div>
+
+
+
+
+
+
+  <section class="donation-section">
+    <h2>Learn About Donation</h2><br>
+    <p>Select your Blood Type</p>
+    <div class="blood-type-buttons">
+      <button onclick="showInfo('A+')">A+</button>
+      <button onclick="showInfo('O+')">O+</button>
+      <button onclick="showInfo('B+')">B+</button>
+      <button onclick="showInfo('AB+')">AB+</button>
+      <button onclick="showInfo('A-')">A-</button>
+      <button onclick="showInfo('O-')">O-</button>
+      <button onclick="showInfo('B-')">B-</button>
+      <button onclick="showInfo('AB-')">AB-</button>
+    </div>
+ <div class="info">
+      <div class="take-from">
+          <h2>You can take from:</h2><br>
+          <p id="take-from">Select a blood type</p>
+      </div>
+      <div class="give-to">
+          <h2>You can give to:</h2><br>
+          <p id="give-to">Select a blood type</p>
+      </div>
+  </div>
+ </section>
+</main>
+
+<script> 
+const bloodData = {
+  "A+": {receiveFrom: "O+  O-  A+  A-", giveTo: "A+  AB+"
+  },
+  "O+": {receiveFrom: "O+  O-",giveTo: "A+  B+  AB+  O+" },
+  "B+": {receiveFrom: "B+  B-  O+  O-",giveTo: "B+  AB+"
+  },
+  "AB+": {receiveFrom: "All blood types",giveTo: "AB+ only"
+  },
+  "A-": {receiveFrom: "A-  O-",giveTo: "A+  A-  AB+  AB-"
+  },
+  "O-": {receiveFrom: "O- only",giveTo: "All blood types"
+  },
+  "B-": {receiveFrom: "B-  O-",giveTo: "B+  B-  AB+  AB-"
+  },
+  "AB-": {receiveFrom: "A-  B-  AB-  O-",giveTo: "AB+  AB-"
+  }
+};
+function showInfo(type) {
+  document.getElementById("take-from").textContent = bloodData[type].receiveFrom;
+  document.getElementById("give-to").textContent = bloodData[type].giveTo;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood Donation Form</title>
+  <style>
+    /* your CSS stays same */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff4d4d;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #ff4d4d;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e04444;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #successMessage {
+      color: green;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #submittingMessage {
+      text-align: center;
+      font-weight: bold;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Blood Donation Form</h1>
+    <form id="donationForm">
+
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label>Gender:<br><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </label>
+
+      <label for="bloodGroup">Blood Group:</label>
+      <select id="bloodGroup" name="bloodGroup" required>
+        <option value="">Select Your Blood Group</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+      </select>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+      <label for="lastDonation">Last Donation Date (Optional):</label>
+      <input type="date" id="lastDonation" name="lastDonation">
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+ 
+     <p id="submittingMessage" class="hidden">Submitting your details, please wait...</p>
+    <!-- <p id="successMessage" class="hidden">Thank you for your interest in donating blood! We'll be in touch soon.</p> -->
+    <img  src="images/thanks.png" width="400px"  style="margin-left: 90px;" id="successMessage" class="hidden" >
+
+  </div>
+
+  <script defer>
+   document.getElementById('donationForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const fullName = document.getElementById('fullName').value.trim();
+  const age = parseInt(document.getElementById('age').value);
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
+  const bloodGroup = document.getElementById('bloodGroup').value;
+  const email = document.getElementById('email').value.trim();
+  const phoneNumber = document.getElementById('phoneNumber').value.trim();
+  
+  // This is where you add the line to handle lastDonation
+  const lastDonation = document.getElementById('lastDonation').value.trim() || null; // Set to null if empty
+  
+  const address = document.getElementById('address').value.trim();
+
+
+  // Validations
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phonePattern = /^\d{10}$/;
+
+  if (!fullName || !gender || !bloodGroup || !email || !phoneNumber || !address) {
+    alert('Please fill out all required fields.');
+    return;
+  }
+
+  if (isNaN(age) || age < 18 || age > 65) {
+    alert('Age must be between 18 and 65 years.');
+    return;
+  }
+
+  if (!emailPattern.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  if (!phonePattern.test(phoneNumber)) {
+    alert('Phone number must be exactly 10 digits.');
+    return;
+  }
+
+  // Show submitting message
+  document.getElementById('submittingMessage').classList.remove('hidden');
+
+  // Everything valid, now submit
+  const formData = { fullName, age, gender, bloodGroup, email, phoneNumber, lastDonation, address};
+
+  fetch('http://localhost:4000/donate', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(response => {
+    document.getElementById('submittingMessage').classList.add('hidden'); // hide submitting message
+
+    if (response.ok) {
+      document.getElementById('successMessage').classList.remove('hidden');
+      document.getElementById('donationForm').reset();
+      document.getElementById('donationForm').classList.add('hidden'); // hide form after successful submission
+    } else {
+      alert('Submission failed. Please try again.');
+    }
+  })
+  .catch(error => {
+    document.getElementById('submittingMessage').classList.add('hidden');
+    console.error('Error:', error);
+    alert('An error occurred. Check your server.');
+  });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - BloodConnect</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src 'self' data:;">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<form id="loginForm" action="http://localhost:5000/login" method="post">
+    <h2>Login</h2>
+    <div class="login-form">
+      <div class="login-field">
+        <input name="email" type="email" id="email" class="login-input" required autocomplete="off" />
+        <span class="login-label">Email</span>
+      </div>
+
+      <div class="login-field">
+        <input name="password" type="password" id="password" class="login-input" required />
+        <span class="login-label">Password</span>
+      </div>
+<br>
+      <button type="submit">Login</button>
+      <br><br>
+      <p>Don't have an account? <a href="regi.html">Register here</a></p>
+    </div>
+  </form>
+
+  <div class="image">
+    <img src="images/man.png" alt="Login Image" />
+  </div>
+
+ </body>
+ </html>

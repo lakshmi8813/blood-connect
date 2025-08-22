@@ -1,0 +1,223 @@
+*{
+  color:black;
+}
+p{
+  font-size: 20px;
+}
+h2{
+  color:#9e0310;
+}
+
+ .logo{
+  margin:10px;
+    width:130px;
+    height:120px;
+    border-radius: 50%;
+    vertical-align:right;
+    display: inline-block;
+    border:1px solid rgb(242, 184, 184);
+}
+.title{
+position: absolute;
+top:15px;
+left:150px;
+color: rgb(149, 3, 3);
+border: none;
+margin: 5px;
+
+}
+.tag-line{
+position: absolute;
+top:50px;
+margin-left:180px; 
+} 
+.navbar{
+   display: flex;
+   justify-content:space-evenly;
+   align-items: center;
+   background-color:rgba(254, 160, 160, 0.96);
+   border-radius: 8px;
+   height:45px;
+   width:100%;
+}
+.navbar li{
+   list-style: none;
+
+}
+.navbar a{
+   color:black;
+   font-size: 1.5rem;
+   text-decoration: none;
+}
+.logo a{
+   font-size: 1.5rem;
+   font-weight: bold;
+   position: relative;
+   top:45px;
+  }
+ 
+.headerr{
+   position: relative;
+   padding:0 2rem;
+}
+
+/*  ----- REGISTER &LOG IN BUTTON -----*/
+a button{
+  cursor:pointer;
+  }
+.icon{
+    height:90px;
+     padding:0 7px; 
+} 
+.header-icons{
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    top:30px;
+    right:35px;
+}
+.register-icon,
+.login-icon
+{
+    height: 40px;
+    width:80px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size:20px ;
+     background-color: rgb(211, 53, 53); 
+     color:white;
+     border-style: none;
+     cursor: pointer;
+
+}
+.donate-btn{
+width:150px;
+height:47px;
+margin: 5px;
+border-radius: 6px;
+font-size:20px ;
+background-color: rgb(211, 53, 53); 
+color:white;
+border-style: none;
+cursor: pointer;
+
+}
+/* BODY*/
+/*MAIN IMG*/
+ .colour{
+ background-color: #f3e8e9;
+   margin-top:5px;
+ }
+.img-quote {
+   font-size: larger;
+   position:absolute;
+   top:300px;
+   left:100px;
+ }
+
+ /*WHY YOUR DONATION MATTERS*/
+.whyYourDonationMatters{
+   margin-top: 40px;
+   margin-left:30px;
+ }
+ .whyYourDonationMatters h2{
+   color:#9e0310;
+ }
+   .whyYourDonationMatters p
+ {
+  left:0;
+   font-size: 20px;
+ }
+ .whyYourDonationMatters img{
+  margin-left:700px;
+  position: absolute;
+  top:650px;
+  border-radius: 20%;
+}
+.whyYourDonationMatters{
+  margin-top:10px;
+}
+
+
+ /* FEATURES*/
+.featuresBox{
+  border-top:3px pink dashed;
+  border-bottom:3px pink dashed;
+}
+.featuresIntro{
+  margin-top:40px;
+ }
+  .featuresIntro p{
+  font-size: 20px;
+  }
+ .frames{
+  display:flex;
+  justify-content: space-evenly; 
+ }
+ .frames2{
+  display:flex;
+  justify-content:space-evenly; 
+ }
+.frames img{
+   width:400px;
+   height:200px;
+}
+.frames2 img{
+  width:400px;
+   height:200px;
+}
+.frames,.frames2 {
+  margin-left:100px;
+}
+.frames img:hover{
+  border:2px rgb(239, 83, 83) dashed;
+  width:420px;
+  height:220px;
+}
+.frames2 img:hover{
+  border:2px rgb(239, 83, 83)dashed;
+  width:420px;
+  height: 220px;
+}
+
+/*TheDonationProcess*/
+.process{
+display:flow-root;
+margin:25px 0;
+border-bottom:3px pink dashed;
+}
+
+.process img{
+  float:left;
+margin-right:60px;
+width:480px;
+height:220px;
+}
+.process h2{
+  border-bottom: 2px dashed #d3d4d6 ;
+}
+.redbtn{
+  width:200px;
+  height:50px;
+}
+.donate-btn:hover{
+background-color: #edc2c5;
+color:#9e0310;
+border:2px dotted rgb(233, 132, 132);
+}
+
+ footer p {
+  position: absolute;
+  margin-left:600px;
+  top:3000px;
+ }
+ footer h3{
+  position: absolute;
+  margin-left:600px;
+  top:3050px;
+ }
+ footer h2{
+  position: absolute;
+  margin-left:700px;
+  top:3080px;
+ }
